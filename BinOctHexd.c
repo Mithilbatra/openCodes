@@ -37,11 +37,10 @@ void fun3(int n){
    int sum=0;
    char str[30];
    int lenght=0;
-   int m=0;
-   while (i) {
+   int m;
+   while (i){
         d = i%16;
         i = i/16;
-
         if(d<10){
             str[lenght] =d+'0';
         }else{
@@ -51,9 +50,10 @@ void fun3(int n){
     }
     str[lenght]='\0';
     printf("The hexadecimal equiavlent of %d is ",n);
-    while(m<lenght){
+    m=lenght-1;
+    while(m>=0){
       printf("%c",str[m]);
-      m++;
+      m--;
     }
 
    }
