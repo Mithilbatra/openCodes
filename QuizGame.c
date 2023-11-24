@@ -24,7 +24,7 @@ void askAudience(char optionA[], char optionB[], char optionC[], char optionD[])
     static int i=0;
     if(i==1){
         printSeparator();
-        printf(YELLOW "You dont have any more lifelines\n" RESET);
+        printf(YELLOW "\nYou dont have any more lifelines\n" RESET);
         printSeparator();
         return;
     }
@@ -119,7 +119,7 @@ int askQuestion(char question[], char optionA[], char optionB[], char optionC[],
     char userAnswer;
     int Lifelineoption=0,call=0;
     int store=0,e,counterr=0;
-    int localcount=0,lifecount=0,jumpcount=0;
+    int localcount=0,lifecount=0,jumpcount=0,randc=0;
 
     printSeparator();
     printf("\n%s\n", question);
@@ -145,6 +145,7 @@ int askQuestion(char question[], char optionA[], char optionB[], char optionC[],
            askAudience(optionA, optionB, optionC, optionD);
            counterr++;
            coun++;
+           randc++;
         }else if(Lifelineoption==1){
             //counter for when the lifeline has already been used once
             store=switchquestion();
@@ -188,6 +189,16 @@ int askQuestion(char question[], char optionA[], char optionB[], char optionC[],
         c=c-32;
         userAnswer=(char)c;
         goto run;
+    }
+    if(randc==1){
+     // Check if the user's answer is correct
+      if (userAnswer == correctOption) {
+        printf(GREEN "Correct!\n" RESET); // Green text for correct answer
+        return 1; // Return 1 for a correct answer
+      }else {
+        printf(RED "Incorrect. The correct answer is %c.\n" RESET, correctOption); // Red text for incorrect answer
+        return 0; // Return 0 for an incorrect answer
+      }
     }
     jog:
     if(localcount==1){
