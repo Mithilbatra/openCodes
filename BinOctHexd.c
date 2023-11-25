@@ -55,7 +55,6 @@ void fun3(int n){
       printf("%c",str[m]);
       m--;
     }
-
    }
 int main()
 {
