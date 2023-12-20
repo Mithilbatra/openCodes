@@ -9,4 +9,7 @@ Here is the link to my LinkedIn profile : [LinkedIn](https://www.linkedin.com/in
 
 The main reason I created this repository is to show my coding work to others.
 
-[Github](file:///Users/mithil/Desktop/Github%20repo.png)
+
+![Github repo](https://github.com/Mithilbatra/openCodes/assets/145864311/196fd5f7-ad14-41d3-9e1d-e8e6a73dd017)
+
+
